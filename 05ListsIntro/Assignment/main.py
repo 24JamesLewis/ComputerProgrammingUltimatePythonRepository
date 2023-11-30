@@ -141,8 +141,14 @@ def make_reversed_copy(list):
     last8 = list[-1]
     if first8 == list[0]:
         return  list[-1]
+    if middle5 == list[1]:
+        return list[1]
+    if last8 == list[1]:
+        return list[0]
+    return list
+    
 original_list1 = [1, 2, 3]
 print("Demonstrate make_reversed_copy")
 print("Original List:", original_list1)
-print("Reversed List:", make_reversed_copy(original_list1))
+print("Reversed List:", make_reversed_copy())
 
