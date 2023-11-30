@@ -122,3 +122,27 @@ print("[False, False, False] -> ", mostly_true([False, False, False]))
 print("[True, True, True] -> ", mostly_true([True, True, True]))
 print("[False, True, False] -> ", mostly_true([False, True, False]))
 print("[True, False, False] -> ", mostly_true([True, False, False]))
+
+def make_copy(list):
+   return list
+print("Demonstrate make_copy")
+original_list = [5, 6, 1]
+copied_list = make_copy(original_list) 
+print("Original List:", original_list) 
+print("Copied List:", copied_list)
+
+def repeat_thrice(integer):
+    return integer
+print("Demonstrate repeat_thrice")
+
+def make_reversed_copy(list):
+    first8 = list[0]
+    middle5 = list[1]
+    last8 = list[-1]
+    if first8 == list[0]:
+        return  list[-1]
+original_list1 = [1, 2, 3]
+print("Demonstrate make_reversed_copy")
+print("Original List:", original_list1)
+print("Reversed List:", make_reversed_copy(original_list1))
+
