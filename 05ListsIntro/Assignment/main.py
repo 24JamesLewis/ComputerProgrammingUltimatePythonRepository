@@ -131,24 +131,36 @@ copied_list = make_copy(original_list)
 print("Original List:", original_list) 
 print("Copied List:", copied_list)
 
-def repeat_thrice(integer):
-    return integer
+
+
+def repeat_thrice(item):
+    
+    return item
 print("Demonstrate repeat_thrice")
+
+
 
 def make_reversed_copy(list):
     first8 = list[0]
     middle5 = list[1]
     last8 = list[-1]
-    if first8 == list[0]:
-        return  list[-1]
-    if middle5 == list[1]:
-        return list[1]
-    if last8 == list[1]:
-        return list[0]
     return list
-    
+
 original_list1 = [1, 2, 3]
+reversed_list = make_reversed_copy(original_list1)
 print("Demonstrate make_reversed_copy")
 print("Original List:", original_list1)
-print("Reversed List:", make_reversed_copy())
+print("Reversed List:", reversed_list)
+
+
+def reverse_in_place(list):
+    first9 = list[0]
+    middle6 = list[1]
+    last9 = list[-1]
+    return first9 == list[-1], middle6 == list[1], last9 == list[0]
+original_list2 = [1, 2, 3]
+print("Demonstrate reverse_in_place:")
+print("Original: ", original_list2)
+print("Reversed: ", )
+
 
