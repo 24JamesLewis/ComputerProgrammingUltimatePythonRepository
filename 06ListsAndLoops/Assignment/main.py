@@ -20,5 +20,31 @@ act_scores = [20, 56, 1, 0, 36]
 return_valid_act = count_act_scores(act_scores)
 print(return_valid_act)
 
-def number_sum(numbers):
+def number_sum(number):
+    total = 0 
+    total = sum(number)
+    return total
+numbers = [7, 4, 3, 19, 12]
+sum_of_numbers = number_sum(numbers)
+print(sum_of_numbers)
+
+def average_act_score(scores):
+    total1 = 0
+    for numbers in scores:
+        total1 = total1 + numbers
+
+    return total1 / len(scores)
+
+list = [23, 11, 36, 3]
+result = average_act_score(list)
+print(result)
+
+def all_true(list):
+    for boolean in list:
+        if boolean == False:
+            return False
+    print("hey, I got to line 46")
     
+
+print(all_true(["true", "true", "true"]))
+print(all_true(["true", "false", "true"]))
