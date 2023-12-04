@@ -43,6 +43,7 @@ def all_true(list):
     for boolean in list:
         if boolean == False:
             return False
+
     print("hey, I got to line 46")
     
 
