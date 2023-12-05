@@ -49,3 +49,45 @@ def all_true(list):
 
 print(all_true(["true", "true", "true"]))
 print(all_true(["true", "false", "true"]))
+
+#def any_true(list):
+    
+#def mostly_true(list):
+    
+
+def has_vowel(letters): 
+
+    for letter in letters:
+        if letter in ["a", "e", "i", "o", "u"]:
+            return True
+    return False
+
+print("Demonstrate has_vowel:")
+print(has_vowel(["a", "e", "i" ]))
+print(has_vowel(["b", "f", "g" ]))
+print(has_vowel(["h", "g", "i" ]))
+
+def all_the_same(numbers):
+    for number in numbers:
+        
+        if number: 
+            return True
+        else:
+            return False
+
+print("Demonstrate all_the_same:")        
+print(all_the_same([1, 1, 1]))
+print(all_the_same([1, 2, 3]))
+
+#def increasing(list):
+   
+print("Demonstrate increasing:")
+
+#def is_incrementing():
+
+
+#def has_adjacent_repeat():
+
+
+#def sum_with_skips():
+   

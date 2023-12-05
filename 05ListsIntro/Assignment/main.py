@@ -21,11 +21,11 @@ print("[-1, 0, 1, 2, -1] -> ", equal_edges([-1, 0, 1, 2, -1]))
 print("[4, 4] -> ", equal_edges([4, 4]))
 
 def common_edge(list1, list2):
-    first1 = list1[0]
-    first2 = list2[0]
-    last1 = list1[-1]
-    last2 = list2[-1]
-    if first2 == last1:
+    first = list1[0]
+    first = list2[0]
+    last = list1[-1]
+    last = list2[-1]
+    if first == last:
         return True
     else:
         return False
@@ -37,14 +37,14 @@ print("[-1, 0, 1, 2] & [2, 3, 4, 5]-> ", common_edge([-1, 0, 1, 2], [2, 3, 4, 5]
 print("[3, 3, 3] & [3, 3, 3]-> ", common_edge([3, 3, 3], [3, 3, 3]))
 
 def all_the_same(list):
-    first3 = list[0]
+    first = list[0]
     middle = list[1]
-    last3 = list[-1]
-    if first3 == middle and  first3 == last3:
+    last = list[-1]
+    if first == middle and  first == last:
         return True
-    elif middle == first3 and middle == last3:
+    elif middle == first and middle == last:
         return True
-    elif last3 == first3 and last3 == middle:
+    elif last == first and last == middle:
         return True
     else:
         return False
@@ -56,14 +56,14 @@ print("[3, 3, 3] -> ", all_the_same([3, 3, 3]))
 print("[4, 5, 6] -> ", all_the_same([4, 5, 6]))
 
 def all_unique(list):
-    first4 = list[0]
-    middle1 = list[1]
-    last4 = list[-1]
-    if first4 != middle1 and first4 != last4:
+    first = list[0]
+    middle = list[1]
+    last = list[-1]
+    if first != middle and first != last:
         return True
-    elif middle1 != first4 and middle1 != last4:
+    elif middle != first and middle != last:
         return True
-    elif last4 != first4 and last4 != middle1:
+    elif last != first and last != middle:
         return True
     else:
         return False
@@ -75,10 +75,10 @@ print("[3, 3, 3] -> ", all_unique([3, 3, 3]))
 print("[4, 5, 6] -> ", all_unique([4, 5, 6]))
 
 def increasing(list):
-    first5 = list[0]
-    middle2 = list[1]
-    last5 = list[-1]
-    if first5 < middle2 < last5:
+    first = list[0]
+    middle = list[1]
+    last = list[-1]
+    if first < middle < last:
         return True
     else:
         return False
@@ -90,10 +90,10 @@ print("[3, 3, 3] -> ", all_unique([3, 3, 3]))
 print("[4, 5, 6] -> ", all_unique([4, 5, 6]))
 
 def all_true(list):
-    first6 = list[0]
-    middle3 = list[1]
-    last6 = list[-1]
-    if first6 and middle3 and last6 == True:
+    first = list[0]
+    middle = list[1]
+    last = list[-1]
+    if first and middle and last == True:
         return True
     else:
         return False
@@ -105,14 +105,14 @@ print("[False, True, False] -> ", all_true([False, True, False]))
 print("[True, False, False] -> ", all_true([True, False, False]))
 
 def mostly_true(list):
-    first7 = list[0]
-    middle4 = list[1]
-    last7 = list[-1]
-    if first7 == True and middle4 == True:
+    first = list[0]
+    middle = list[1]
+    last = list[-1]
+    if first == True and middle == True:
         return True
-    elif middle4 == True and last7 == True:
+    elif middle == True and last == True:
         return True
-    elif first7 == True and last7 == True:
+    elif first == True and last == True:
         return True
     else:
         return False
@@ -141,9 +141,9 @@ print("Demonstrate repeat_thrice")
 
 
 def make_reversed_copy(list):
-    first8 = list[0]
-    middle5 = list[1]
-    last8 = list[-1]
+    first = list[0]
+    middle = list[1]
+    last = list[-1]
     return list
 
 original_list1 = [1, 2, 3]
@@ -154,10 +154,10 @@ print("Reversed List:", reversed_list)
 
 
 def reverse_in_place(list):
-    first9 = list[0]
-    middle6 = list[1]
-    last9 = list[-1]
-    return first9 == list[-1], middle6 == list[1], last9 == list[0]
+    first = list[0]
+    middle = list[1]
+    last = list[-1]
+    return first == list[-1], middle == list[1], last == list[0]
 original_list2 = [1, 2, 3]
 print("Demonstrate reverse_in_place:")
 print("Original: ", original_list2)
