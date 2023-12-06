@@ -28,8 +28,9 @@ print(count_numbers([1, 3, 5, 7, 8, 2, 4]))
 
 def count_target_letters(word, character):
     total = 0
-    for character in word:
-        total = total + character
+    target = "a"
+    for target in word:
+        
     
     return total
 
