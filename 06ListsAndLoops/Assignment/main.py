@@ -58,7 +58,7 @@ print(all_true(["true", "false", "true"]))
 def has_vowel(letters): 
 
     for letter in letters:
-        if letter in ["a", "e", "i", "o", "u"]:
+        if letter in "aeiou":
             return True
     return False
 
