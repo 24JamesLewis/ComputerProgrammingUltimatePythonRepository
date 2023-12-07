@@ -29,21 +29,56 @@ print(count_numbers([1, 3, 5, 7, 8, 2, 4]))
 def count_target_letters(word, character):
     total = 0
     target = "a"
-    for target in word:
-        
-    
+    for letter in word:
+        if letter == target:
+            total = total + 1
     return total
 
-print(count_target_letters("alphabetical", "a"))
-    
-def in_alphabetical_order(word):
-    start = word[0]
-    for letter in word:
-        if letter > start:
-            return True
-        else: 
-            return False
-        
-print(in_alphabetical_order("What"))
-print(in_alphabetical_order("App"))
 
+print(count_target_letters("alphabetical", ""))
+    
+#def in_alphabetical_order(string):
+    #for letter in string:
+
+        
+#print(in_alphabetical_order("Test"))
+#print(in_alphabetical_order("App"))
+
+#def alternate_case(word):
+    #position = [0]
+     #for letter in word:
+         #if position == :
+            #letter.upper(letter)
+             #position = position + 2
+     #return letter
+ 
+ #print(alternate_case("test")) 
+
+#def remove_vowels(string):
+    #for letter in string:
+        #if letter == "aeiou" :
+            #string = 
+    #return string
+
+#print("Demonstrate remove_vowels")
+#print(remove_vowels("ate"))
+
+def to_camel_case(string):
+    result = ""
+    for letter in string:
+        if letter != " ":
+            result = result + letter
+            
+    return result
+
+print(to_camel_case("hello this is a phrase".title()))
+
+#def to_snake_case():
+
+
+#print(to_snake_case("This is a test"))
+    
+#def without_duplicates(list):
+
+#def filter_valid_act_scores(list):
+    
