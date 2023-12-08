@@ -86,7 +86,6 @@ def to_snake_case(string):
 
 print("Demonstrate to_snake_case")
 print(to_snake_case("hello this is a phrase".replace(" ", "_" )))
-#print(to_snake_case("This is a test"))
     
 #def without_duplicates(list):
 
