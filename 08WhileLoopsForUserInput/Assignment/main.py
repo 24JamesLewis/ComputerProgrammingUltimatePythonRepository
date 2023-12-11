@@ -14,16 +14,18 @@ def number_guesser():
             print("Try again!")
             invalid_guess == True    
        
-
+print(secret_number)
 number_guesser()
 
+
+secret_number = random.randint(1, 10)
 def number_guesser_with_lives():
     lives = 3
     number_guess = ""
     invalid_guess = True
     while invalid_guess == True:
         print("Guess a number from 1 - 10")
-        number_gues = int(input())
+        number_guess = int(input())
         if lives == 1:
             print("Game over you lose!", "lives remaining:", lives - 1 )
             return invalid_guess == False and print("You lose!")
@@ -35,7 +37,7 @@ def number_guesser_with_lives():
             lives = lives - 1
             print("Try again!", "Lives remaining:", lives )
             invalid_guess == True
-
+print(secret_number)
 number_guesser_with_lives()
 
 def vending_machine(): 
