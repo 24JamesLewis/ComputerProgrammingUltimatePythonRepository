@@ -14,7 +14,7 @@ def number_guesser():
             print("Try again!")
             invalid_guess == True    
        
-print(secret_number)
+
 number_guesser()
 
 
@@ -37,7 +37,7 @@ def number_guesser_with_lives():
             lives = lives - 1
             print("Try again!", "Lives remaining:", lives )
             invalid_guess == True
-print(secret_number)
+            
 number_guesser_with_lives()
 
 def vending_machine(): 
