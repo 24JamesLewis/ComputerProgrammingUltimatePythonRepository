@@ -86,18 +86,28 @@ for row in reader:
     if gradelevel == 9:
         freshman = freshman + 1
         grade1 = grade1 + percent
+        grade1 = grade1 / freshman  
     if gradelevel == 10:
         sophmore = sophmore + 1
         grade2 = grade2 + percent
+        grade2 = grade2 / sophmore 
     if gradelevel == 11:
         junior = junior + 1
         grade3 = grade3 + percent
+        grade3 = grade3 / junior
     if gradelevel == 12:
         senior = senior + 1
         grade4 = grade4 + percent
-         
+        grade4 = grade4 / senior
+grade1 = grade1 * 100
+grade2 = grade2 * 100
+grade3 = grade3 * 100
+grade4 = grade4 * 100
 
-print(freshman, grade1, sophmore, grade2, junior, grade3, senior, grade4)
+print("Freshman average:", grade1)
+print("Sophmore average:", grade2)
+print("Junior average:", grade3)
+print("Senior average:", grade4)
 
 f.close()
 
@@ -112,3 +122,4 @@ for row in reader:
         senior = senior + 1
         name 
 print(senior, )
+
