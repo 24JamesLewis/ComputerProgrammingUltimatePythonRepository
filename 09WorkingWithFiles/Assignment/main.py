@@ -71,7 +71,10 @@ f.close()
 f = open("../data/gradebook_data.csv", "r" )
 reader = csv.reader(f)
 count = 0
-grade = 0
+grade1 = 0
+grade2 = 0
+grade3 = 0
+grade4 = 0
 freshman = 0
 sophmore = 0
 junior = 0
@@ -82,15 +85,19 @@ for row in reader:
     percent = int(percent)
     if gradelevel == 9:
         freshman = freshman + 1
+        grade1 = grade1 + percent
     if gradelevel == 10:
         sophmore = sophmore + 1
+        grade2 = grade2 + percent
     if gradelevel == 11:
         junior = junior + 1
+        grade3 = grade3 + percent
     if gradelevel == 12:
         senior = senior + 1
+        grade4 = grade4 + percent
         
 
-print(freshman, sophmore, junior, senior)
+print(freshman, grade1, sophmore, grade2, junior, grade3, senior, grade4)
 
 f.close()
 
@@ -103,5 +110,5 @@ for row in reader:
     percent = int(percent)
     if percent <= 60 and gradelevel == 12:
         senior = senior + 1
-
-print(senior)
+        name 
+print(senior, )
