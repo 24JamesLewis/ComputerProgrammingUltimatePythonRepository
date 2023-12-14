@@ -1,5 +1,6 @@
 import csv
 import os
+import json
 
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
@@ -56,15 +57,42 @@ def average_word_length(words):
 f = open("../data/gradebook_data.csv", "r" )
 reader = csv.reader(f)
 count = 0
-grade = 0
+fail = 0
+d = 0
+c = 0
+b = 0
+a = 0
+
 for row in reader:
     name, gradelevel, percent = row 
     percent = int(percent)
-    if percent <= 60 :
-        grade = grade + 1
+    if percent <= 59 :
+        fail = fail + 1
+    if percent <= 69:
+        d = d + 1
+    if percent <= 79:
+        c = c + 1
+    if percent >= 80:
+        b = b + 1
+    if percent >= 90:
+        a = a + 1
 
-
-print(grade)
+#percentage number
+# A: 90-100%
+# B: 80-89%
+# C: 70-79%
+# D: 60-69%
+# F: 0-59%
+                
+b = b - a       
+c = c - (d + fail)        
+d = d - fail        
+print("The amount of students with each grades are:")
+print("A:", a)
+print("B:", b)
+print("C", c)
+print("D:", d)
+print("F:", fail)
 
 f.close()
 
@@ -111,6 +139,7 @@ print("Senior average:", grade4)
 
 f.close()
 
+#individual name list 
 f = open("../data/gradebook_data.csv", "r" )
 reader = csv.reader(f)
 senior = 0
@@ -120,6 +149,18 @@ for row in reader:
     percent = int(percent)
     if percent <= 60 and gradelevel == 12:
         senior = senior + 1
-        name 
-print(senior, )
+        print(name)
 
+
+
+f = open("../data/1000-largest-us-cities.json", "r")
+cities = json.load(f)
+count = 0
+for city in cities:
+    if city["state"] == "Kansas":
+        count = count + 1
+
+
+f.close()
+
+print(cities[48]["city"], cities[131]["city"], cities[167]["city"], cities[192]["city"], cities[201]["city"], cities[337]["city"], cities[540]["city"], cities[646]["city"], cities[734]["city"], )
