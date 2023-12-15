@@ -151,16 +151,26 @@ for row in reader:
         senior = senior + 1
         print(name)
 
-
+f.close()
 
 f = open("../data/1000-largest-us-cities.json", "r")
 cities = json.load(f)
-count = 0
-for city in cities:
-    if city["state"] == "Kansas":
-        count = count + 1
-
-
 f.close()
 
+count = 0
+name = ""
+growth = 0
+
+for city in cities: 
+    if city["state"] == "Kansas":
+        pass
+    if len(city["city"]) >  0:
+        name = city
+
+for growth_from_2000_to_2013 in cities:
+    if city["growth_from_2000_to_2013"] > growth:
+        growth = growth_from_2000_to_2013
+
 print(cities[48]["city"], cities[131]["city"], cities[167]["city"], cities[192]["city"], cities[201]["city"], cities[337]["city"], cities[540]["city"], cities[646]["city"], cities[734]["city"], )
+print(len(city["city"]), name)
+print(growth)
