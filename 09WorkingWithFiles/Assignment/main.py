@@ -168,7 +168,7 @@ for city in cities:
         name = city
 
 for growth_from_2000_to_2013 in cities:
-    if city["growth_from_2000_to_2013"] > growth:
+    if int(city["growth_from_2000_to_2013"]) > growth:
         growth = growth_from_2000_to_2013
 
 print(cities[48]["city"], cities[131]["city"], cities[167]["city"], cities[192]["city"], cities[201]["city"], cities[337]["city"], cities[540]["city"], cities[646]["city"], cities[734]["city"], )
