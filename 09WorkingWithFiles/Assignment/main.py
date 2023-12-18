@@ -157,9 +157,11 @@ f = open("../data/1000-largest-us-cities.json", "r")
 cities = json.load(f)
 f.close()
 
-count = 0
-name = ""
+count = "0"
+name1 = "0"
 growth = 0
+longest = 0
+n = 0
 
 for city in cities: 
     if city["state"] == "Kansas":
@@ -167,10 +169,25 @@ for city in cities:
     if len(city["city"]) >  0:
         name = city
 
-for growth_from_2000_to_2013 in cities:
-    if int(city["growth_from_2000_to_2013"]) > growth:
-        growth = growth_from_2000_to_2013
+
+#for city in cities: 
+    #if cities[n]["city"] > name1:
+        #n = n + 1
+        #name1 = cities[n]["city"]
+       
+    #elif cities[n]["city"] == 1000:
+
+        #pass
+
+for city in cities: 
+    if cities[n]["city"] != 1000:
+        n = n + 1
+        name1 = cities[n]["city"]
+     
+       
+
 
 print(cities[48]["city"], cities[131]["city"], cities[167]["city"], cities[192]["city"], cities[201]["city"], cities[337]["city"], cities[540]["city"], cities[646]["city"], cities[734]["city"], )
 print(len(city["city"]), name)
-print(growth)
+print(cities[1]["city"])
+print(name1)
